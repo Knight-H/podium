@@ -1,0 +1,32 @@
+{
+  "name": "podium",
+  "version": "1.0.0",
+  "description": "Ranked-choice voting for demo days and hackathons — live roster, 3/2/1 scoring, and a cinematic awards reveal. One file, zero dependencies.",
+  "keywords": [
+    "voting",
+    "ranked-choice",
+    "demo-day",
+    "hackathon",
+    "awards",
+    "leaderboard",
+    "zero-dependency"
+  ],
+  "homepage": "https://github.com/Knight-H/podium#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knight-H/podium.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Knight-H/podium/issues"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "Knight-H",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

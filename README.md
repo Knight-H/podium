@@ -28,7 +28,12 @@ will fail to install at the worst possible moment.
 ```bash
 node server.js              # defaults to port 8080
 PORT=8090 node server.js    # or pick your own
+npm start                   # same thing, if you prefer
 ```
+
+There is no `npm install` step — there are no dependencies to install. The
+`package.json` exists only to declare the Node floor, the license, and that
+`start` script.
 
 It prints two URLs. The admin one carries a generated key — that key is your
 password, so keep it off the projector:
