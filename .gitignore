@@ -1,0 +1,9 @@
+# Live event state: contains the generated admin key, the roster, and every
+# ballot cast (who ranked whom). Never commit this.
+data.json
+
+# Editor / OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
