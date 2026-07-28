@@ -1,13 +1,31 @@
 'use strict';
 
 /*
- * Demo-day ranked-choice voting — single-file, zero-dependency Node server.
+ * podium — ranked-choice voting for demo days, with a cinematic awards reveal.
+ * Single-file, zero-dependency Node server.
  *
- * Voters open  /            -> type name, pick 1st/2nd/3rd, submit.
- * Admin opens  /admin?key=  -> add demo names live, open/close voting, watch results.
+ * Copyright (C) 2026 Knight-H
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, either version 3 of the License, or (at your option) any
+ * later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details: <https://www.gnu.org/licenses/>.
+ *
+ * Source: https://github.com/Knight-H/podium
+ *
+ * ---------------------------------------------------------------------------
+ * Voters open  /             -> pick who you are from the roster, rank 1st/2nd/3rd.
+ * Admin opens  /admin?key=   -> add teams live, open/close voting, watch results.
+ * Projector    /reveal?key=  -> countdown, bronze/silver/gold reveal, podium.
  *
  * Scoring: 1st = 3 pts, 2nd = 2 pts, 3rd = 1 pt.
- * One ballot per name (server-side) + one name per device (client localStorage lock).
+ * One ballot per roster identity (server-side; re-submitting overwrites) plus a
+ * one-identity-per-device lock in the browser. You cannot rank yourself.
  * State lives in ./data.json — delete it to fully reset.
  *
  *   node server.js            # PORT defaults to 8080

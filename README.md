@@ -144,4 +144,10 @@ Node 18+. Nothing else. `cloudflared` only if you want a public URL.
 
 ## License
 
-MIT
+**AGPL-3.0.** Use it, self-host it, hack on it freely — but if you modify it and
+run it as a service for other people, you have to make your modified source
+available to those users too (that's the point of the "A" in AGPL, and it's why
+this isn't MIT). Keeping a fork closed while serving it over a network is exactly
+what this license prevents.
+
+See [LICENSE](LICENSE) for the full text.
